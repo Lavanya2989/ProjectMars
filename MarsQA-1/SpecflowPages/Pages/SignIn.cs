@@ -8,6 +8,7 @@ namespace MarsQA_1.Pages
     {
         public static void Login()
         {
+            //Enter Url
             Driver.NavigateUrl();
 
             //Enter sign in

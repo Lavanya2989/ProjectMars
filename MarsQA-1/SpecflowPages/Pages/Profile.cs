@@ -12,10 +12,13 @@ namespace MarsQA_1.SpecflowPages.Pages
 {
    public static class Profile
     {
-        public static void Language()
+        public static void Languages()
         {
+            Driver.TurnOnWait();
             Thread.Sleep(5000);
-            //Select Language
+            //Move to table
+            Driver.driver.FindElement(By.XPath("//*[@id='account - profile - section']/div/section[2]/div/div/div/div[3]/form/div[1]"));
+            //Select Languages
             Driver.driver.FindElement(By.XPath("//*[@id='account - profile - section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[1]")).Click();
             //click add new
             Driver.driver.FindElement(By.XPath("//*[@id='account - profile - section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div")).Click();

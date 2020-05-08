@@ -27,9 +27,9 @@ namespace MarsQA_1.Utils
             //call the SignIn class
             SignIn.Login();
          }
-       public void Language()
+       public void Languages()
         {
-            Profile.Language();
+            Profile.Languages();
         }
         public void Skill()
         {
