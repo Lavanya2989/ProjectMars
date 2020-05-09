@@ -150,12 +150,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Feature\AddingSellerProfileDetailsSteps.cs" />
+    <Compile Include="Feature\Helpers\Driver.cs" />
     <Compile Include="Feature\Login.cs" />
-    <Compile Include="SpecflowPages\Helpers\ConstantHelpers.cs" />
-    <Compile Include="SpecflowPages\Helpers\Driver.cs" />
-    <Compile Include="SpecflowPages\Pages\Profile.cs" />
-    <Compile Include="SpecflowPages\Pages\SignIn.cs" />
-    <Compile Include="SpecflowPages\Utils\Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

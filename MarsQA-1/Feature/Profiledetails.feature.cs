@@ -76,13 +76,13 @@ namespace MarsQA_1.Feature
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Add Language known by seller")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
+        [NUnit.Framework.CategoryAttribute("language")]
         public virtual void AddLanguageKnownBySeller()
         {
             string[] tagsOfScenario = new string[] {
-                    "mytag"};
+                    "language"};
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Language known by seller", null, new string[] {
-                        "mytag"});
+                        "language"});
 #line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -121,10 +121,13 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Add Skill of the seller")]
+        [NUnit.Framework.CategoryAttribute("Skill")]
         public virtual void AddSkillOfTheSeller()
         {
-            string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Skill of the seller", null, ((string[])(null)));
+            string[] tagsOfScenario = new string[] {
+                    "Skill"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Skill of the seller", null, new string[] {
+                        "Skill"});
 #line 13
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
