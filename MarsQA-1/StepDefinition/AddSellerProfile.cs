@@ -17,7 +17,6 @@ namespace MarsQA_1.Feature
             Thread.Sleep(15000);
             //Select Languages
             Driver.driver.FindElement(By.XPath("//a[@class='item active' and @data-tab='first']")).Click();
-            Thread.Sleep(15000);
             Driver.TurnOnWait();
             //click add new
             Driver.driver.FindElement(By.XPath("//div[contains(text(),'Add New')][1]")).Click();
