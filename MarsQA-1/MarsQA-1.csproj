@@ -164,6 +164,7 @@
     <None Include="Feature\Login.feature" />
     <None Include="Feature\Profiledetails.feature" />
     <None Include="packages.config" />
+    <None Include="Feature\TestCases.feature" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

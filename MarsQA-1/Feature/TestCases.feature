@@ -49,12 +49,12 @@ Scenario: Add Certification of seller
  	And Seller press add 
 	Then Pop shows Certification has been added
 @Edit Certification
-Scenario:Edit Language
+Scenario:Edit Certification
 	Given Clicked Edit button
 	When Seller have Update the Certifiction detail
  	And Seller clicked update button
 	Then Pop up shows Certification has been updated
 	
-@Delete Education
-Scenario: Delete Education
+@Delete Certification
+Scenario: Delete Certification
  Given Click delete button

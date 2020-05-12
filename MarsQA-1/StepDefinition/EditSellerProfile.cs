@@ -13,10 +13,11 @@ namespace MarsQA_1.Step_definition
         public static void GivenClickEditButton()
         {
             Thread.Sleep(15000);
+            Driver.TurnOnWait();
             //Click Edit button
-            Driver.driver.FindElement(By.XPath("//td[@class='right aligned']//span[@class='button']//i[@class='outline write icon']")).Click();
-         
-         }
+            Driver.driver.FindElement(By.XPath("(//td[@class='right aligned']//span[@class='button']//i[@class='outline write icon'])[2][last()]")).Click();
+          
+        }
         
        [When(@"Seller have updated Language and level")]
         public static void WhenSellerHaveUpdatedLanguageAndLevel()

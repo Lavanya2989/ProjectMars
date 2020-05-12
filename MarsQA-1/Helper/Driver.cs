@@ -17,7 +17,7 @@ namespace MarsQA_1.Helpers
     class Driver
     {
      public static IWebDriver driver { get; set; }
-       
+        #region Before Scenario
         [BeforeScenario]
         public static void SetUp()
         {
@@ -26,12 +26,15 @@ namespace MarsQA_1.Helpers
             Login.GivenLoginToTheWebsite();
             Login.WhenIEnterValidUsernameAndPassword();
         }
+        #endregion
+        #region wait
         public static void TurnOnWait()
         {
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
         }
-
+        #endregion
+        #region AfterScenario
         [AfterScenario]
          //Close the browser
         public void Close()
@@ -40,4 +43,5 @@ namespace MarsQA_1.Helpers
         }
 
     }
+    #endregion
 }
