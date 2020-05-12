@@ -2,7 +2,7 @@
 	Navigate to URL
 	Login with valid credentials
 	Seller can add the details in it
-@mytag
+@smoke
 Scenario: Login with valid credential
 	Given Login to the website
 	When I enter valid username and password

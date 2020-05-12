@@ -76,12 +76,15 @@ namespace MarsQA_1.Feature
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Add Language known by seller")]
+        [NUnit.Framework.CategoryAttribute("Add")]
         [NUnit.Framework.CategoryAttribute("language")]
         public virtual void AddLanguageKnownBySeller()
         {
             string[] tagsOfScenario = new string[] {
+                    "Add",
                     "language"};
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Language known by seller", null, new string[] {
+                        "Add",
                         "language"});
 #line 7
 this.ScenarioInitialize(scenarioInfo);
@@ -107,27 +110,27 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("Select Langauge and Click Add new", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 9
- testRunner.And("Seller have entered Language and level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("Seller have entered Language and level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 10
-  testRunner.When("Seller pressed add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 11
- testRunner.Then("the pop up shows language has been added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("Seller pressed add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add Skill of the seller")]
-        [NUnit.Framework.CategoryAttribute("Skill")]
-        public virtual void AddSkillOfTheSeller()
+        [NUnit.Framework.DescriptionAttribute("Edit Language")]
+        [NUnit.Framework.CategoryAttribute("Edit")]
+        [NUnit.Framework.CategoryAttribute("language")]
+        public virtual void EditLanguage()
         {
             string[] tagsOfScenario = new string[] {
-                    "Skill"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Skill of the seller", null, new string[] {
-                        "Skill"});
+                    "Edit",
+                    "language"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Language", null, new string[] {
+                        "Edit",
+                        "language"});
 #line 13
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -149,16 +152,52 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 14
- testRunner.Given("Select Skill and Click add new", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("Click Edit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 15
- testRunner.And("Seller have entered Skill and level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("Seller have updated Language and level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 16
-  testRunner.When("Seller pressed add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.Then("Seller clicked update button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 17
- testRunner.Then("the pop up shows skill has been added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Delete Language")]
+        [NUnit.Framework.CategoryAttribute("Delete")]
+        [NUnit.Framework.CategoryAttribute("Language")]
+        public virtual void DeleteLanguage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Delete",
+                    "Language"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete Language", null, new string[] {
+                        "Delete",
+                        "Language"});
+#line 19
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 20
+ testRunner.Given("Click delete button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             }
             this.ScenarioCleanup();
