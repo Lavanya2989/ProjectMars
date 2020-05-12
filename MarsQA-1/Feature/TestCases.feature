@@ -1,6 +1,6 @@
 ﻿Feature: Login to website and adding SellerProfile
 
-@login
+@login 
 Scenario: I login to website with invalid credential
 	Given I login to website
 	And I have entered invalid user name and password
@@ -32,7 +32,7 @@ Scenario: Add Education of seller
  	And Seller press add 
 	Then Pop shows Education has been added
 @Edit Education
-Scenario:Edit Language
+Scenario:Edit Education
 	Given Clicked Edit button
 	When Seller have Update the Education detail
  	And Seller clicked update button
