@@ -52,11 +52,17 @@
     <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
     </Reference>
+    <Reference Include="ExtentReports, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExtentReports.3.1.1\lib\ExtentReports.dll</HintPath>
+    </Reference>
     <Reference Include="Gherkin, Version=6.0.0.0, Culture=neutral, PublicKeyToken=86496cfa5b4a5851, processorArchitecture=MSIL">
       <HintPath>..\packages\Gherkin.6.0.0\lib\net45\Gherkin.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf, Version=3.7.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.7.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.5, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Bson, Version=2.7.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MongoDB.Bson.2.7.2\lib\net45\MongoDB.Bson.dll</HintPath>
@@ -75,9 +81,6 @@
     </Reference>
     <Reference Include="RazorEngine, Version=3.10.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
       <HintPath>..\packages\RazorEngine.3.10.0\lib\net45\RazorEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="RelevantCodes.ExtentReports, Version=1.4.9.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ExtentReports.2.41.0\lib\RelevantCodes.ExtentReports.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -149,24 +152,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StepDefinition\AddSellerProfile.cs" />
-    <Compile Include="StepDefinition\DeleteSellerProfile.cs" />
+    <Compile Include="TestSuite\AddLang.cs" />
+    <Compile Include="StepDefinition\EditSellerSkill.cs" />
+    <Compile Include="TestSuite\EditSkillTest.cs" />
+    <Compile Include="TestSuite\EducationAdd.cs" />
+    <Compile Include="StepDefinition\AddingSellerEducation.cs" />
+    <Compile Include="StepDefinition\AddSellerLanguage.cs" />
+    <Compile Include="StepDefinition\DeleteSellerLanguage.cs" />
     <Compile Include="Helper\Driver.cs" />
-    <Compile Include="StepDefinition\EditSellerProfile.cs" />
+    <Compile Include="StepDefinition\EditSellerLanguage.cs" />
     <Compile Include="Helper\Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestSuite\AddProfileTestSuite.cs" />
-    <Compile Include="TestSuite\DeleteTestSuite.cs" />
-    <Compile Include="TestSuite\EditTestSuite.cs" />
+    <Compile Include="TestSuite\DeleteLanguageTestSuite.cs" />
+    <Compile Include="TestSuite\EditLanguage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Feature\Login.feature" />
-    <None Include="Feature\Profiledetails.feature" />
+    <None Include="FeatureFile\Login.feature" />
+    <None Include="FeatureFile\Profiledetails.feature" />
+    <None Include="license" />
     <None Include="packages.config" />
-    <None Include="Feature\TestCases.feature" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="extent-config.xml" />
+    <Content Include="Scripts\Alert.js" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
